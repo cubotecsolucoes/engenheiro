@@ -100,7 +100,7 @@ fieldset[disabled] .btn-primary.active {
   background-color: white;
 }
 .btn-xl {
-  color: white;
+  color: white !important;
   background-color: #3498db;
   border-color: #3498db;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
