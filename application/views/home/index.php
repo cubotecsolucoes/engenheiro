@@ -271,7 +271,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Cubotec 2017</span>
+                    <span class="copyright">Copyright &copy; <a href="https://www.facebook.com/cubotec.solucoes/" target="_blank">Cubotec 2017</a></span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
