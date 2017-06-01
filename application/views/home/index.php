@@ -285,9 +285,14 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Política de Privacidade</a>
+                        <li>
+                            <a href="#">Política de Privacidade</a>
                         </li>
-                        <li><a href="#">Termos de Uso</a>
+                        <li>
+                            <a href="#">Termos de Uso</a>
+                        </li>
+                        <li>
+                            <a href="login/index">Entrar</a>
                         </li>
                     </ul>
                 </div>
