@@ -566,19 +566,6 @@
             }
           })
           .done(function() {
-            console.log("success");
-          })
-          .fail(function() {
-            console.log("error");
-          })
-          .always(function() {
-            console.log("complete");
-          });
-          
-
-          $.post(site_url + '/controle/' + tipo + '/' + token, $(this).serialize(), function(data, textStatus, xhr) {
-            if (textStatus == 'success')
-            {
               $('#modalForm').modal('hide');
               if (tipo == 'addMenu') {DrawTableMenu();}
               else if (tipo == 'addPortfolio') {DrawTablePortfolio();}
@@ -586,7 +573,12 @@
               else if (tipo == 'addService') {DrawTableServicos();}
               else if (tipo == 'addAbout') {DrawTableHistoria();}
               else if (tipo == 'addPartners') {DrawTableParceiros();}
-            }
+          })
+          .fail(function() {
+            console.log("error");
+          })
+          .always(function() {
+            console.log("complete");
           });
       });
 
