@@ -71,8 +71,8 @@ class Menus_model extends CI_Model {
     public function add()
     {
         $object = [
-            'menu' => $this->getName(),
-            'link' => $this->getImg(),
+            'menu' => $this->getMenu(),
+            'link' => $this->getLink(),
         ];
         return $this->db->insert('menus',$object);
     }
@@ -96,7 +96,7 @@ class Menus_model extends CI_Model {
     {
         $object = [
             'menu' => $this->getName(),
-            'link' => $this->getImg(),
+            'link' => $this->getLink(),
         ];
         $this->db->where('id',$id);
         $this->db->from('menus');
@@ -110,6 +110,10 @@ class Menus_model extends CI_Model {
         return $this->db->get()->result_array();
     }
 
-
-
+    public function count()
+    {
+        $tabela = "menus";
+        $result = $this->db->query("SELECT COUNT(*) as count FROM $tabela")->result_array();
+        return $result[0]['count'];
+    }
 }

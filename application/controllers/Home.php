@@ -31,6 +31,7 @@ class Home extends CI_Controller {
 	    $this->load->model('abouts_model','about');
 	    $this->load->model('team_model','team');
 	    $this->load->model('partners_model','partners');
+	    $this->load->model('mensage_model','mensage');
 
 	    $data = [
 	        'menus' => $this->menu->getMenuList(),
@@ -39,6 +40,8 @@ class Home extends CI_Controller {
             'abouts' => $this->about->getAboutList(),
             'teams' => $this->team->getTeamList(),
             'partners' => $this->partners->getPartnersList(),
+        	'mensage_title' => $this->mensage->getTitle(),
+        	'mensage_subtitle' => $this->mensage->getSubtitle(),
         ];
 		$this->load->view('home/index',$data);
 	}

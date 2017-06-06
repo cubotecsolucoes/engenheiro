@@ -69,8 +69,8 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Bem vindo ao seu site!</div>
-                <div class="intro-heading">O melhor de nós, para você</div>
+                <div class="intro-lead-in"><?php echo $mensage_title; ?></div>
+                <div class="intro-heading"><?php echo $mensage_subtitle; ?></div>
                 <a href="#services" class="page-scroll btn btn-xl">Começar</a>
             </div>
         </div>
@@ -213,7 +213,7 @@
             <div class="row">
                 <?php foreach ($partners as $index => $partner): ?>
                 <div class="col-md-<?php echo(12/count($partners)); ?> col-sm-6">
-                    <a href="#">
+                    <a href="<?php echo($partner['url']); ?>" target="_blank">
                         <img src="<?php echo(base_url('assets/img/logos/'.$partner['img'])); ?>" class="img-responsive img-centered" alt="<?php echo($partner['name']); ?>">
                     </a>
                 </div>
@@ -292,7 +292,7 @@
                             <a href="#">Termos de Uso</a>
                         </li>
                         <li>
-                            <a href="login/index">Entrar</a>
+                            <a href="<?php echo(site_url("login/index")) ?>">Entrar</a>
                         </li>
                     </ul>
                 </div>

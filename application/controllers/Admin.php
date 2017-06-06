@@ -8,15 +8,17 @@ class Admin extends CI_Controller {
         parent::__construct();
 
         $this->template->set('title','Página de Admin');
-        $this->template->set('user_name','Everton Carlos');
-        $this->template->set('user_office','Developer');
-        $this->template->set('user_last_login','12/02/2018');
+        $this->template->set('user_name', $this->session->userdata('name'));
+        $this->template->set('user_office', $this->session->userdata('office'));
+        $this->template->set('user_last_login', $this->session->userdata('last_login'));
     }
 
 	public function index()
 	{
+        $this->load->model('Mensage_model','mensage');
 	    $data = [
-            'config_msg' => 'Teste',
+            'config_title' => $this->mensage->getTitle(),
+            'config_subtitle' => $this->mensage->getSubtitle(),
         ];
 
 	    $this->template->load('admin/template','admin/index',$data);

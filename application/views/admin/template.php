@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/_all-skins.min.css'); ?>">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap3-wysihtml5.min.css'); ?>">
+    <!-- Datatables -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/jquery.dataTables.min.css'); ?>">
 
 
     <!-- jQuery 2.2.3 -->
@@ -28,7 +30,8 @@
     <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.min.js'); ?>"></script>
     <!-- Bootstrap WYSIHTML5 -->
     <script src="<?php echo base_url('assets/js/bootstrap3-wysihtml5.all.min.js'); ?>"></script>
-
+    <!-- Datatables -->
+    <script src="<?php echo base_url('assets/js/jquery.dataTables.min.js'); ?>"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -70,7 +73,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="col-lg-12">
-                                    <a href="#" class="btn btn-default btn-block btn-flat">Sair</a>
+                                    <a href="<?php echo(site_url('login/logout')) ?>" class="btn btn-default btn-block btn-flat">Sair</a>
                                 </div>
                             </li>
                         </ul>

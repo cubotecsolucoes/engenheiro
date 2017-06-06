@@ -129,4 +129,11 @@ class Services_model extends CI_Model {
         return $this->db->get()->result_array();
     }
 
+    public function count()
+    {
+        $tabela = "services";
+        $result = $this->db->query("SELECT COUNT(*) as count FROM $tabela")->result_array();
+        return $result[0]['count'];
+    }
+
 }

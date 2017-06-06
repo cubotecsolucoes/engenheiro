@@ -37,6 +37,14 @@ class Partners_model extends CI_Model {
     /**
      * @return mixed
      */
+    public function getTitle()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getName()
     {
         return $this->name;
@@ -63,7 +71,7 @@ class Partners_model extends CI_Model {
      */
     public function setImg(string $img)
     {
-        $this->img = base_url("assets/img/partners/$img");
+        $this->img = $img;
     }
 
     /**
@@ -129,5 +137,10 @@ class Partners_model extends CI_Model {
         return $this->db->get()->result_array();
     }
 
-
+    public function count()
+    {
+        $tabela = "partners";
+        $result = $this->db->query("SELECT COUNT(*) as count FROM $tabela")->result_array();
+        return $result[0]['count'];
+    }
 }

@@ -63,6 +63,15 @@ class Team_model extends CI_Model {
         return $this->name;
     }
 
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->name;
+    }
+
     /**
      * @param mixed $name
      */
@@ -169,6 +178,7 @@ class Team_model extends CI_Model {
     public function update(int $id)
     {
         $object = [
+            'img' => $this->getImg(),
             'name' => $this->getName(),
             'office' => $this->getOffice(),
             'twitter' => $this->getTwitter(),
@@ -185,6 +195,13 @@ class Team_model extends CI_Model {
         $this->db->select('*');
         $this->db->from('team');
         return $this->db->get()->result_array();
+    }
+
+    public function count()
+    {
+        $tabela = "team";
+        $result = $this->db->query("SELECT COUNT(*) as count FROM $tabela")->result_array();
+        return $result[0]['count'];
     }
 
 }

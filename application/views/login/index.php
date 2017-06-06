@@ -35,7 +35,7 @@
       <div class="login-box-body">
         <p class="login-box-msg">Faça o login para iniciar a sessão</p>
 
-        <form action="" id="formlogin" method="post">
+        <form action="<?php echo(site_url('login/login')); ?>" id="formlogin" method="post">
         <div class="form">
         </div>
               <div class="form-group has-feedback">

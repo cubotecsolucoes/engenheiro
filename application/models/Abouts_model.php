@@ -150,4 +150,11 @@ class Abouts_model extends CI_Model
         $this->db->from('abouts');
         return $this->db->get()->result_array();
     }
+
+    public function count()
+    {
+        $tabela = "abouts";
+        $result = $this->db->query("SELECT COUNT(*) as count FROM $tabela")->result_array();
+        return $result[0]['count'];
+    }
 }
