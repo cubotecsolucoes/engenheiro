@@ -44,7 +44,7 @@ class Controle extends CI_Controller {
     {
         $img_tmp = $file[ 'img' ][ 'tmp_name' ];
         echo $img_tmp;
-        echo "foi";
+        echo '<br>';
         $nome = $file[ 'img' ][ 'name' ];
      
         // Pega a extensão
@@ -64,7 +64,7 @@ class Controle extends CI_Controller {
             $novoNome = $instance->getTitle() . '.' . $extensao;
 
             // Concatena a pasta com o nome
-            $destino = '/public/assets/img/'.$destino.'/'. $novoNome;
+            $destino = '/home/agencia.com.br/public/assets/img/'.$destino.'/'. $novoNome;
      
             // tenta mover o img para o destino
             if ( @move_uploaded_file ( $img_tmp, $destino ) ) 
