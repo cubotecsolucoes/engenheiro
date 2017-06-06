@@ -62,7 +62,7 @@ class Controle extends CI_Controller {
             $novoNome = $instance->getTitle() . '.' . $extensao;
      
             // Concatena a pasta com o nome
-            $destino = 'C://xampp/htdocs/projetoAlpha/assets/img/'.$destino.'/'. $novoNome;
+            $destino = '/public/assets/img/'.$destino.'/'. $novoNome;
      
             // tenta mover o img para o destino
             if ( @move_uploaded_file ( $img_tmp, $destino ) ) 
