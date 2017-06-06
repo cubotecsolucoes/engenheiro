@@ -42,8 +42,9 @@ class Controle extends CI_Controller {
     // FUNÇÕES DE IMG
     public function recebeImg($file, $destino,$instance)
     {
-        $img_tmp = $_FILES[ 'img' ][ 'tmp_name' ];
-        $nome = $_FILES[ 'img' ][ 'name' ];
+        $img_tmp = $file[ 'img' ][ 'tmp_name' ];
+        echo $img_tmp;
+        $nome = $file[ 'img' ][ 'name' ];
      
         // Pega a extensão
         $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
@@ -60,7 +61,7 @@ class Controle extends CI_Controller {
             // Evita que duplique as imagens no servidor.
             // Evita nomes com acentos, espaços e caracteres não alfanuméricos
             $novoNome = $instance->getTitle() . '.' . $extensao;
-     
+
             // Concatena a pasta com o nome
             $destino = '/public/assets/img/'.$destino.'/'. $novoNome;
      
@@ -69,7 +70,7 @@ class Controle extends CI_Controller {
             {
 
                 $this->instance->setImg($novoNome);
-                if (empty($_FILES['img']))
+                if (empty($file['img']))
                 {
                     $instance->setImg('default.png');
                 }
