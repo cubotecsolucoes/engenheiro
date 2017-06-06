@@ -44,6 +44,7 @@ class Controle extends CI_Controller {
     {
         $img_tmp = $file[ 'img' ][ 'tmp_name' ];
         echo $img_tmp;
+        echo "foi";
         $nome = $file[ 'img' ][ 'name' ];
      
         // Pega a extensão
